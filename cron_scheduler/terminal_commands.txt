@@ -23,4 +23,3 @@ crontab -r
 # you can stop cron jobs by commenting out the line like this:
 # */30 * * * * PYTHONPATH=/path/to/bs4 python /path/to/script/cot.py
 
-#Change
