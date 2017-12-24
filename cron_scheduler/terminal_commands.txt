@@ -1,0 +1,24 @@
+# Run these commands in terminal and set the pythonpath variable so that python can recognize beautifulsoup
+
+# After running schedulecron.py, you must change your crontab file and add the pythonpath variable
+
+#This command will show the path where beautifulsoup is installed (if not installed, install it using pip install beautifulsoup4)
+python -c 'import bs4; print(bs4.__file__)'
+
+#Show and edit your crontab file in vim (after the command, press A to go into insert mode, edit the file and then press ‘:x’ and ‘ENTER’ to save the new crontab file.)
+crontab -e
+
+# After the last * in your cron scheduler add the path you found earlier as your PYTHONPATH
+PYTHONPATH=/path/to/bs4
+
+#Check your new crontab file
+crontab -l 
+
+# Your crontab should look like this:
+*/30 * * * * PYTHONPATH=/path/to/bs4 python /path/to/script/cot.py
+
+# To delete your crontab file 
+crontab -r 
+
+# you can stop cron jobs by commenting out the line like this: 
+# */30 * * * * PYTHONPATH=/path/to/bs4 python /path/to/script/cot.py
