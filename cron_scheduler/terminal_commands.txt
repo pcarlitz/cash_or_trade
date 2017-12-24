@@ -12,13 +12,15 @@ crontab -e
 PYTHONPATH=/path/to/bs4
 
 #Check your new crontab file
-crontab -l 
+crontab -l
 
 # Your crontab should look like this:
 */30 * * * * PYTHONPATH=/path/to/bs4 python /path/to/script/cot.py
 
-# To delete your crontab file 
-crontab -r 
+# To delete your crontab file
+crontab -r
 
-# you can stop cron jobs by commenting out the line like this: 
+# you can stop cron jobs by commenting out the line like this:
 # */30 * * * * PYTHONPATH=/path/to/bs4 python /path/to/script/cot.py
+
+#Change
